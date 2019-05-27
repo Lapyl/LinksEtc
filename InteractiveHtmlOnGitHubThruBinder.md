@@ -1,6 +1,6 @@
-Make Interactive Html on GitHub using Binder
+### Interactive Html on GitHub through Binder
 
-Refer: https://www.nbinteract.com/tutorial/tutorial_github_setup.html
+## Refer: https://www.nbinteract.com/tutorial/tutorial_github_setup.html
 
 Go to your GitHub repositories.
 Create a new repo, titled as InteractiveHtml or something,  with readme or some starting content.
