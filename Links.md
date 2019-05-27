@@ -1,4 +1,4 @@
-### Github repositories
+### GitHub repositories
 
 https://github.com/QISKit/openqasm : Open QASM specification
 
