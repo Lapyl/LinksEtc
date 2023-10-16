@@ -1,4 +1,5 @@
-Using different versions of Python
+# Using different versions of Python
+
 On my Windows computer, I had Python 3.9.7 installed, with lots of Python packages installed during the last several years. Even though I knew about Python virtual environment, I had avoided using it, and relied solely on the main Python installation. Recently, I needed to use a specialized Python package. I found that this package was not yet available for Python 3.9.7; it was available for only up to Python 3.7.x. I then felt the need for using Python virtual environment or some other way that can allow me to use Python 3.7.x, without disrupting my Python 3.9.7 installation. The following is a description of what I did. I do not claim this to be the best way of doing, but it did and does serve my purpose. I hope it helps someone.
 From python.org website, I downloaded .msi or .exe files for installing 2.7.18, 3.0.1, 3.1.4, 3.2.5, 3.3.5, 3.4.4, 3.5.4, 3.6.8, 3.7.9, 3.8.10, 3.9.13, 3.10.11, 3.11.6, and 3.12.0 versions of Python. I then installed these versions in G:\Python_2.7.18, …, G:\Python_3.12.0 folders.
 I started an Excel file called PyPacks.xlsm. I renamed its first sheet as Note. In cell A1, I wrote the following, based on Python packages I have found useful in my Python works:
