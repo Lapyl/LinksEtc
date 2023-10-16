@@ -51,19 +51,25 @@ In this Excel file, I added a VBA module, and added the following code.
     End Sub
 
 I ran the MacInstallPythonPackages macro from this Excel file. It prepared E:\Jupyter\Versions\V2.7.18.py, …, E:\Jupyter\Versions\V3.12.0.py files.
+
 I opened Visual Studio Code. Therein, I opened E:\Jupyter\Versions folder.
+
 I opened V2.7.18.py file in Visual Studio Code. It showed the following text in the editor.
-#!G:/Python_2.7.18/python.exe
-print("Stated version: 2.7.18")
-print("Stated folder: G:\Python_2.7.18")
-import os, sys, subprocess
-sRes = str(sys.version_info)
-print("Inferred version: " + sRes)
-sRes = os.path.dirname(sys.executable)
-print("Inferred folder: " +  sRes)
-subprocess.check_call([sys.executable, "-m", "pip", "install", "pandas"])
-…
-subprocess.check_call([sys.executable, "-m", "pip", "install", "wxPython”])
+
+    #!G:/Python_2.7.18/python.exe
+    print("Stated version: 2.7.18")
+    print("Stated folder: G:\Python_2.7.18")
+    import os, sys, subprocess
+    sRes = str(sys.version_info)
+    print("Inferred version: " + sRes)
+    sRes = os.path.dirname(sys.executable)
+    print("Inferred folder: " +  sRes)
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "pandas"])
+    …
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "wxPython”])
+
 I clicked the gear button in the left bottom corned, and then clicked Command Palette. From the header pull-down menu, I clicked “Terminal: Run Active File in Active Terminal”. This installed pandas, …, wxPython packages in Python 2.7.18 version, in the G:\Python_2.7.18\Lib\site-packages folder.
+
 Thereafter, I opened V3.0.1.py file, I repeated the above steps.
+
 I repeated all the above steps for all other V*.py files.
