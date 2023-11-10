@@ -1,9 +1,9 @@
-### Interactive Html on GitHub through Binder
+## Interactive Html on GitHub through Binder
 
 Refer: https://www.nbinteract.com/tutorial/tutorial_github_setup.html
 
 - Go to your GitHub repositories.
-- Create a new repo, titled as InteractiveHtml or something,  with readme or some starting content.
+- Create a new repo, titled as InteractiveHtml or something, with readme or some starting content.
 - Go to mybinder.org .
 - Write "https://github.com/{GHusername}/{GHreponame}" for GitHub repository name.
 - Click Launch.
@@ -23,7 +23,6 @@ Refer: https://www.nbinteract.com/tutorial/tutorial_github_setup.html
 -     ? Username for 'https://github.com' ? {GHusername}
 -     ? Password ? {GHpassword}
 - This creates configuration files on Binder and pushes them to GH repo.
-  
 - From the "tree notebook", click New and click Python3.
 - This opens "https://hub.mybinder.org/user/{GHusername}-{GHreponame}-{somecode}/notebooks/Untitled.ipynb" in Jupyter notebook.
 - Save this "content notebook" as {SomeName}.ipynb.
