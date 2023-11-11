@@ -1,4 +1,4 @@
-## Interactive Html on GitHub through Binder
+## To create an interactive Html on GitHub through Binder
 
 Refer: https://www.nbinteract.com/tutorial/tutorial_github_setup.html
 

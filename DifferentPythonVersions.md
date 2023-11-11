@@ -1,6 +1,4 @@
-## Different Python Versions
-
-The following is a possible non-virtual-environment approach for having different Python versions.
+## To have different Python versions without virtual environments
 
 Download .msi or .exe files for 2.7.18, 3.0.1, 3.1.4, 3.2.5, 3.3.5, 3.4.4, 3.5.4, 3.6.8, 3.7.9, 3.8.10, 3.9.13, 3.10.11, 3.11.6, and 3.12.0 versions of Python.
 
@@ -10,7 +8,7 @@ Prepare an Excel file named PyPacks.xlsm.
 
 Rename the xlsm file's first sheet as Note.
 
-In the xlsm file's A1 cell, write names of useful Python packages.
+In the Note sheet's A1 cell, write names of useful Python packages.
 
     pandas matplotlib scikit-learn tensorflow asgiref audioread Babel beautifulsoup4 bokeh Cirq cmake contourpy coremltools datasets Django easygui ffmpeg Flask folium glob2 gpt-index gradio gradio_client h5py httpcore json5 jupyter jupyter-client jupyter-console jupyter-core jupyter-server jupyterlab keras Keras-Preprocessing langchain langchainplus-sdk llama-index matplotlib matplotlib-inline mysql mysql-connector mysqlclient notebook numpy oauthlib openai openapi-schema-pydantic opencv-python opencv-python-headless openpyxl pandas path pathlib2 pathspec pdfreader Pillow plotly protobuf py Pygments qiskit qiskit-aer qiskit-ibmq-provider qiskit-terra qiskit-textbook QtPy regex requests requests-mock requests-ntlm requests-oauthlib responses scikit-image scikit-learn-intelex scikit-video scipy seaborn setuptools spyder spyder-kernels sqlparse tensorboard tensorboard-data-server tensorboard-plugin-wit tensorboardX tensorflow tensorflow-addons tensorflow-estimator tensorflow-hub tensorflow-io-gcs-filesystem tensorflowjs tensorspacejs tqdm transformers wxPython
 
@@ -45,15 +43,13 @@ In the xlsm file, add a VBA module with the following code.
         MsgBox "Done"
     End Sub
 
-Run the MacInstallPythonPackages macro from this xlsm file, to prepare E:\Jupyter\Versions\V2.7.18.py, …, E:\Jupyter\Versions\V3.12.0.py files.
+Run the MacInstallPythonPackages macro from this xlsm file.
 
-In Visual Studio Code (VSC), open E:\Jupyter\Versions folder.
+The mcaro will prepare E:\Jupyter\Versions\V2.7.18.py, …, E:\Jupyter\Versions\V3.12.0.py files, with the following codes:
 
-In VSC, open V2.7.18.py file, which will show the following.
-
-    #!G:/Python_2.7.18/python.exe
-    print("Stated version: 2.7.18")
-    print("Stated folder: G:\Python_2.7.18")
+    #!G:/Python_<version>/python.exe
+    print("Stated version: <version>")
+    print("Stated folder: G:\Python_<version>")
     import os, sys, subprocess
     sRes = str(sys.version_info)
     print("Inferred version: " + sRes)
@@ -63,8 +59,8 @@ In VSC, open V2.7.18.py file, which will show the following.
     …
     subprocess.check_call([sys.executable, "-m", "pip", "install", "wxPython”])
 
-In VSC's left bottom, click the gear button, and then click Command Palette. From the header pull-down menu, click “Terminal: Run Active File in Active Terminal”.
+In Visual Studio Code (VSC), open E:\Jupyter\Versions folder.
 
-This will install pandas, …, wxPython packages in Python 2.7.18 version, in the G:\Python_2.7.18\Lib\site-packages folder.
+In VSC, for each <version> (one by one): Open V<version>.py file. In the left bottom corner, click gear button, and then Command Palette. In the header pull-down menu, click “Terminal: Run Active File in Active Terminal”.
 
-Repeat the above steps for other Python versions.
+This will install pandas, …, wxPython packages in Python <version> version, in the G:\Python\_<version>\Lib\site-packages folder.

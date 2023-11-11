@@ -1,4 +1,4 @@
-## Make Python Package
+## To make and release a Python package
 
 Refer: https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/
 
