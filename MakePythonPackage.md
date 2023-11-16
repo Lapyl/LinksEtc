@@ -28,14 +28,19 @@ In setup.py file, add:
 
 Check that the code works in VSC.
 
-In VSC, at command prompt, at <packagetopfolder>, run the following to generate <packagesubfolder>-<versionnumber>.tar.gz and <packagesubfolder>-<versionnumber>-py3-none-any.whl files in dist folder.
+In VSC, at command prompt, at <packagetopfolder>, run the following to generate dist/<packagesubfolder>-<versionnumber>.tar.gz .
 
     python -m build --sdist
+
+In VSC, at command prompt, at <packagetopfolder>, run the following to generate dist/<packagesubfolder>-<versionnumber>-py3-none-any.whl .
+
     python -m build --wheel
+
+In VSC, delete existing files in pypi folder, and copy the latest .tr.gz and .whl files from dist folder to pypi folder.
 
 In VSC, at command prompt, at <packagetopfolder>, run the following to install <packagesubfolder> package in active Python installation.
 
-    pip install dist/<packagesubfolder>-<versionnumber>-py3-none-any.whl
+    pip install pypi/<packagesubfolder>-<versionnumber>-py3-none-any.whl
 
 Using Jupyter Notebook, verify that the installed package works as expected.
 
@@ -47,7 +52,7 @@ At PyPi.org, create your account, if not already done.
 
 In VSC, at command prompt, at <packagetopfolder>, run the following to upload dist/\* to your PyPi.org account.
 
-    twine upload dist/\*
+    twine upload pypi/\*
 
 Verify the package got uploaded to PyPi.org .
 
